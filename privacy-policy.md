@@ -20,6 +20,6 @@ Data persists only as long as the extension is installed. Uninstalling the exten
 We may update this policy as needed. Significant changes will be communicated via the extension's update notes.
 
 ## Contact
-If you have questions about this policy, contact: [drimesbot@gmail.com]
+If you have questions about this policy, contact: [drimesbot@gmail.com](drimesbot@gmail.com)
 
-Last updated: [02/15/2025]
+Last updated: 02/15/2025
