@@ -1,0 +1,70 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  /* width: 800px; */
+  /* min-height: 100px; */
+  background-color: #f8f9fa;
+}
+.popup-container {
+  width: 450px;
+  padding: 1rem;
+  background: #2d2d2d;
+  color: white;
+}
+
+.tag-toggle {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag-toggle button {
+  flex: 1;
+  padding: 0.5rem;
+  background: #444;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tag-toggle button.active {
+  background: #646cff;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.category-button {
+  padding: 0.5rem;
+  background: #444;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.category-button:hover {
+  background: #555;
+}
+
+.category-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading-indicator {
+  margin-top: 1rem;
+  text-align: center;
+  color: #888;
+}
+
+/* .active {
+  background: rgb(26, 170, 26);
+} */
