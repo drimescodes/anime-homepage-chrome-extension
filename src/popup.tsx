@@ -4,8 +4,13 @@ import { fetchAnimeImage } from './utils/imageUtils';
 import './popup.css';
 
 const categories = {
-  sfw: ['waifu', 'neko', 'shinobu', 'megumin', 'bully', 'cuddle', 'cry', 'hug', 'awoo', 'kiss', 'lick', 'pat', 'smug', 'bonk', 'yeet', 'blush', 'smile'],
-  nsfw: ['waifu', 'neko', 'trap', 'blowjob']
+  sfw: {
+    'Images': ['waifu', 'neko', 'kitsune', 'husbando', 'maid', 'uniform', 'selfies'],
+    'Reactions': ['hug', 'pat', 'kiss', 'cuddle', 'smile', 'blush', 'smug', 'wave', 'wink', 'dance', 'happy', 'laugh', 'cry', 'bonk', 'yeet', 'slap', 'poke'],
+  },
+  nsfw: {
+    'Images': ['waifu', 'ero', 'ecchi', 'hentai', 'oppai'],
+  },
 };
 
 
@@ -35,6 +40,8 @@ const Popup = () => {
     }
   };
 
+  const currentCategories = categories[selectedTag];
+
   return (
     <div className="popup-container">
       <div className="tag-toggle">
@@ -52,18 +59,23 @@ const Popup = () => {
         </button>
       </div>
 
-      <div className="category-grid">
-        {categories[selectedTag].map((category) => (
-          <button
-            key={category}
-            className="category-button"
-            onClick={() => changeBackground(category)}
-            disabled={loading}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      {Object.entries(currentCategories).map(([groupName, items]) => (
+        <div key={groupName} className="category-group">
+          <div className="category-group-label">{groupName}</div>
+          <div className="category-grid">
+            {items.map((category) => (
+              <button
+                key={category}
+                className="category-button"
+                onClick={() => changeBackground(category)}
+                disabled={loading}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
 
       {loading && <div className="loading">Loading new image...</div>}
     </div>

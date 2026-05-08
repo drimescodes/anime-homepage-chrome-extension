@@ -2,8 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* width: 800px; */
-  /* min-height: 100px; */
   background-color: #f8f9fa;
 }
 .popup-container {
@@ -31,6 +29,19 @@ body {
 
 .tag-toggle button.active {
   background: #646cff;
+}
+
+.category-group {
+  margin-bottom: 0.75rem;
+}
+
+.category-group-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+  margin-bottom: 0.4rem;
+  padding-left: 0.1rem;
 }
 
 .category-grid {
@@ -64,7 +75,3 @@ body {
   text-align: center;
   color: #888;
 }
-
-/* .active {
-  background: rgb(26, 170, 26);
-} */
